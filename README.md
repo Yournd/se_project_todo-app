@@ -9,9 +9,10 @@ Simply add a task and (optionally) a date, then the task appears in the list bel
 ## Technology
 
 This project uses classes and methods in order to generate new tasks. It uses encapsulation, inheritance, and polymorphism in order to keep data secure, allow for further scalability, and provide cleaner code.
+[Screenshot of Simple Todo App](./images/screenshot.png)
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+-[Simple Todo App]()
