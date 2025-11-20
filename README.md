@@ -1,14 +1,14 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+Simple To-Do app created using OOP techinique
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+Simply add a task and (optionally) a date, then the task appears in the list below. Once tasks are completed they can be checked off, and later deleted.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+This project uses classes and methods in order to generate new tasks. It uses encapsulation, inheritance, and polymorphism in order to keep data secure, allow for further scalability, and provide cleaner code.
 
 ## Deployment
 
