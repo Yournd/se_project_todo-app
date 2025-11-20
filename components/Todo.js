@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from "https://jspm.dev/uuid";
-
 class Todo {
   constructor(data, templateSelector) {
     this._data = data;
@@ -8,7 +6,7 @@ class Todo {
 
   _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
-      this._data.completed != this._data.completed;
+      this._data.completed = !this._data.completed;
     });
 
     this._todoDeleteBtn.addEventListener("click", () => {

@@ -77,10 +77,10 @@ class FormValidator {
   }
 
   resetValidation() {
-    const todoName = this._formEl.querySelector(this._inputName);
-    const todoDate = this._formEl.querySelector(this._inputDate);
-    todoName.value = "";
-    todoDate.value = "";
+    this._formEl.reset();
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
+    });
     this._toggleButtonState();
   }
 }
