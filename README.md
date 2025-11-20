@@ -16,4 +16,4 @@ This project uses classes and methods in order to generate new tasks. It uses en
 
 This project is deployed on GitHub Pages:
 
--[Simple Todo App]()
+-[Simple Todo App](https://yournd.github.io/se_project_todo-app/)
