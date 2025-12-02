@@ -6,8 +6,6 @@ class FormValidator {
     this._errorClass = settings.errorClass;
     this._inputErrorClass = settings.inputErrorClass;
     this._inactiveButtonClass = settings.inactiveButtonClass;
-    this._inputName = settings.inputName;
-    this._inputDate = settings.inputDate;
   }
 
   _showInputError(inputElement) {
