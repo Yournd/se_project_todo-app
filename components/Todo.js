@@ -1,16 +1,20 @@
 class Todo {
-  constructor(data, templateSelector) {
+  constructor(data, templateSelector, handleCheck, handleDelete) {
     this._data = data;
     this._templateElement = document.querySelector(templateSelector);
+    this._handleCheck = handleCheck;
+    this._handleDelete = handleDelete;
   }
 
   _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
-      this._data.completed = !this._data.completed;
+      this._handleCheck(this._data.completed);
+      this._toggleCompletion();
     });
 
     this._todoDeleteBtn.addEventListener("click", () => {
-      this._todoElement.remove();
+      this._deleteElement();
+      this._handleDelete(this._data.completed);
     });
   }
 
@@ -36,21 +40,30 @@ class Todo {
     this._todoLabel.setAttribute("for", `todo-${this._data.id}`);
   }
 
+  _toggleCompletion() {
+    this._data.completed = !this._data.completed;
+  }
+  
+  _deleteElement() {
+    this._todoElement.remove();
+  }
+
   getView() {
     this._todoElement = this._templateElement.content
-      .querySelector(".todo")
-      .cloneNode(true);
+    .querySelector(".todo")
+    .cloneNode(true);
     this._todoNameEl = this._todoElement.querySelector(".todo__name");
     this._todoDate = this._todoElement.querySelector(".todo__date");
     this._todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
-
+    
     this._todoNameEl.textContent = this._data.name;
     this._generateCheckboxEl();
     this._generateDate();
     this._setEventListeners();
-
+    
     return this._todoElement;
   }
+
 }
 
 export default Todo;
