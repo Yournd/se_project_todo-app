@@ -27,7 +27,7 @@ const addTodoPopup = new PopupWithForm({
 addTodoPopup.setEventListeners();
 
 function handleCheck(completed) {
-  todoCounter.updateCompleted(completed);
+  todoCounter.updateCompleted(!completed);
 }
 
 function handleDelete(completed) {
